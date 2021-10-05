@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+/ WEB-INF是 Java 的 WEB 應用的安全目錄。所謂安全就是客戶端無法訪問，
+/ 只有服務端可以訪問的目錄。
+
+/ <tr> element to define a table row
+/ <td> element to define a table data
+/ <th> element to define a table heading
+/ <form> element defines a form that is used to collect user input.
+/ <head> is a container for meta data(data about data), and metadata is not display.
+/ <title> defines a title in the browser tab.
+/ Browser executes and downloads JS when it encounters a `<script>` tag in tree structure.
+-->
+
+
+<html>
+    <head> 
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <h1>Collaborative Whiteboard</h1>
+        
+        <table>
+            <tr>
+                <td>
+                    <canvas id="myCanvas" width="150" height="150" style="border:1px solid #000000;"></canvas>
+                    
+                </td>
+                <td>
+                    <form name ="xInputForm">
+                        <table>
+                            <tr>
+                                <th>Color</th>
+                                <td><input type="radio" name="xColor" value="#FF0000" checked="true">Red</td>
+                                <td><input type="radio" name="xColor" value="#0000FF">Blue</td>
+                                <td><input type="radio" name="xColor" value="#FF9900">Orange</td>
+                                <td><input type="radio" name="xColor" value="#33CC33">Green</td>
+                            </tr>
+                            <tr>
+                                <th>Shape</th>
+                                <td><input type="radio" name="xShape" value="square" checked="true">Square</td>
+                                <td><input type="radio" name="xShape" value="circle">Circle</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <script type="text/javascript" src="webSocket.js"></script>
+        <script type="text/javascript" src="whiteboard.js"></script>
+    </body>
+</html>
